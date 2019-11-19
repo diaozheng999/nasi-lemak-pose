@@ -1,0 +1,72 @@
+{
+  "name": "nasi-lemak-pose",
+  "version": "0.9.5",
+  "description": "Typed wrapper for react-native-pose",
+  "main": "dist/cjs/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist && python build_tools/barrel.py clean",
+    "prebuild": "npm run clean && python build_tools/barrel.py",
+    "build": "tsc",
+    "postbuild": "rollup -c rollup.config.js",
+    "test": "jest",
+    "lint": "tslint --project .",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diaozheng999/nasi-lemak-pose"
+  },
+  "module": "dist/esm/index.js",
+  "author": "My M1 App Team",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "nasi": "^1.2.0-pre-1",
+    "nasi-lemak": "^1.2.0-pre.0",
+    "react": "^16.9.0",
+    "react-native": "^0.61.1",
+    "react-native-pose": "^0.9.0",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/lodash": "^4.14.135",
+    "@types/react": "^16.9.5",
+    "@types/react-native": "^0.60.17",
+    "@types/react-test-renderer": "^16.8.3",
+    "jest": "^24.8.0",
+    "react-test-renderer": "^16.8.3",
+    "rollup": "^1.16.7",
+    "rollup-plugin-terser": "^5.1.1",
+    "terser": "^4.1.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-no-focused-test": "^0.5.0",
+    "typescript": "^3.7.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-pose-core|animated-pose)"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "preset": "react-native",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist"
+    ],
+    "globals": {
+      "__DEV__": true
+    }
+  }
+}
