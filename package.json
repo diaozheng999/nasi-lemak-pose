@@ -1,6 +1,6 @@
 {
   "name": "nasi-lemak-pose",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "Typed wrapper for react-native-pose",
   "main": "dist/cjs/index.js",
   "types": "dist/types/index.d.ts",
@@ -22,8 +22,8 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.11",
-    "nasi": "^1.2.0-pre-1",
-    "nasi-lemak": "^1.2.0-pre.0",
+    "nasi": "^1.2.0-pre.5",
+    "nasi-lemak": "^1.2.0-pre.9",
     "react": "^16.9.0",
     "react-native": "^0.61.1",
     "react-native-pose": "^0.9.0",
